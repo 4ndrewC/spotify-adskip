@@ -1,5 +1,6 @@
 import requests
 import time
+import pyautogui as pg
 
 from pprint import pprint
 import subprocess
@@ -12,7 +13,11 @@ def open_spotify(command):
 def close_spotify():
     os.system("taskkill /im Spotify.exe")
 
-spotify_command = "C:\\Users\\Andrew\\AppData\\Roaming\\Spotify\\Spotify.exe"
+def play():
+  pg.press('playpause')
+
+#put your spotify directory for spotify_command
+spotify_command = ""
 
 
 SPOTIFY_GET_CURRENT_TRACK_URL = 'https://api.spotify.com/v1/me/player/currently-playing'
@@ -46,10 +51,12 @@ def main():
       
       if type=='ad':
         close_spotify()
-        time.sleep(2)
+        time.sleep(1)
         open_spotify(spotify_command)
+        time.sleep(1)
+        play()
     except:
-       print('erm')
+       print('somethign worng')
 
 
 
