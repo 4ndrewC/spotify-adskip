@@ -12,8 +12,8 @@ import webbrowser
 app = Flask(__name__)
 
 #api params
-CLIENT_ID = "d3d46d184b734ccb8b70003dcc7ca687"
-CLIENT_SECRET = "d11522290886440b8b13fc4aef532bb9"
+CLIENT_ID = ""
+CLIENT_SECRET = ""
 REDIRECT_URI = 'http://127.0.0.1:5500/callback'
 SCOPE = 'user-read-playback-state' 
 
